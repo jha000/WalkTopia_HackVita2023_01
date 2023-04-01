@@ -5,6 +5,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.view.WindowManager
 import android.view.inputmethod.InputMethodManager
 import android.widget.Button
 import android.widget.EditText
@@ -13,13 +14,14 @@ import android.widget.Toast
 import com.google.firebase.FirebaseException
 import com.google.firebase.auth.PhoneAuthCredential
 import com.google.firebase.auth.PhoneAuthProvider
-import com.google.firebase.database.FirebaseDatabase
+
 import java.util.concurrent.TimeUnit
 
 class loginSendOtp : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login_send_otp)
+
 
 
         val inputmobile = findViewById<EditText>(R.id.editTextPhone3)
@@ -66,7 +68,7 @@ class loginSendOtp : AppCompatActivity() {
                             ) {
                                 progressBar.visibility = View.GONE
                                 buttongetotp.visibility = View.VISIBLE
-                                val intent = Intent(applicationContext, dashboard::class.java)
+                                val intent = Intent(applicationContext, ReceiveOTP::class.java)
                                 val name = inputmobile.text.toString()
                                 intent.putExtra(EXTRA_NAME, name)
                                 intent.putExtra("mobile", inputmobile.text.toString())

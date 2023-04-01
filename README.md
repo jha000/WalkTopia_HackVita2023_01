@@ -58,6 +58,9 @@ We have implemented sophisticated machine learning algorithms to incorporate sma
 
 # Usage
 
+### Splash Screen
+<img src="Resources/app_screenshots/splash_screen.jpeg" alt="Splash Screen" width="300" height="550">
+
 ### Home Page
 <img src="Resources/app_screenshots/home_page.jpeg" alt="Home Page" width="300" height="550">
 

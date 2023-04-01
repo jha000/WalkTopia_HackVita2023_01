@@ -12,6 +12,7 @@ import android.widget.EditText
 import android.widget.ProgressBar
 import android.widget.Toast
 import com.google.firebase.FirebaseException
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.PhoneAuthCredential
 import com.google.firebase.auth.PhoneAuthProvider
 
@@ -23,6 +24,12 @@ class loginSendOtp : AppCompatActivity() {
         setContentView(R.layout.activity_login_send_otp)
 
 
+        val user = FirebaseAuth.getInstance().currentUser
+        if (user != null) {
+            val i = Intent(this@loginSendOtp, dashboard::class.java)
+            i.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+            startActivity(i)
+        }
 
         val inputmobile = findViewById<EditText>(R.id.editTextPhone3)
         val buttongetotp = findViewById<Button>(R.id.button2)

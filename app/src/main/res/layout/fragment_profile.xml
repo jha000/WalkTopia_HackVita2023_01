@@ -317,15 +317,192 @@
                     android:layout_height="1dp"
                     android:background="#33403E3A"/>
 
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="#33403E3A"/>
+                <androidx.cardview.widget.CardView
 
-                <View
                     android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="#33403E3A"/>
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginTop="16dp"
+                    android:visibility="visible"
+                    android:orientation="vertical"
+                    app:cardCornerRadius="10dp"
+
+                    app:cardElevation="0dp"
+
+                    app:layout_constraintTop_toBottomOf="@+id/card">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#D9FAB9">
+
+
+                        <TextView
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:fontFamily="@font/urbanist"
+                            android:gravity="left"
+                            android:padding="16dp"
+                            android:text="Leader board"
+                            android:textAllCaps="false"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="5dp"
+                            android:textFontWeight="600"
+                            android:textColor="@color/blue"
+                            android:textSize="20dp"
+                            android:textStyle="bold"
+                            tools:ignore="MissingConstraints" />
+
+
+
+                    </LinearLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginTop="16dp"
+                    android:visibility="visible"
+                    android:orientation="vertical"
+                    app:cardCornerRadius="10dp"
+
+                    app:cardElevation="0dp"
+
+                    app:layout_constraintTop_toBottomOf="@+id/card">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#D9FAB9">
+
+
+                        <TextView
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:fontFamily="@font/urbanist"
+                            android:gravity="left"
+                            android:padding="16dp"
+                            android:text="Achievements &amp; Badges"
+                            android:textAllCaps="false"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="5dp"
+                            android:textFontWeight="600"
+                            android:textColor="@color/blue"
+                            android:textSize="20dp"
+                            android:textStyle="bold"
+                            tools:ignore="MissingConstraints" />
+
+
+
+                    </LinearLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginTop="16dp"
+                    android:visibility="visible"
+                    android:orientation="vertical"
+                    app:cardCornerRadius="10dp"
+
+                    app:cardElevation="0dp"
+
+                    app:layout_constraintTop_toBottomOf="@+id/card">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#D9FAB9">
+
+
+                        <TextView
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:fontFamily="@font/urbanist"
+                            android:gravity="left"
+                            android:padding="16dp"
+                            android:text="Smart Tracking"
+                            android:textAllCaps="false"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="5dp"
+                            android:textFontWeight="600"
+                            android:textColor="@color/blue"
+                            android:textSize="20dp"
+                            android:textStyle="bold"
+                            tools:ignore="MissingConstraints" />
+
+
+
+                    </LinearLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+
+                    android:layout_width="match_parent"
+                    android:id="@+id/card1"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginTop="16dp"
+                    android:visibility="visible"
+                    android:layout_marginBottom="16dp"
+                    android:orientation="vertical"
+                    app:cardCornerRadius="10dp"
+
+                    app:cardElevation="0dp"
+
+                    app:layout_constraintTop_toBottomOf="@+id/card">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#D9FAB9">
+
+
+                        <TextView
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:fontFamily="@font/urbanist"
+                            android:gravity="left"
+                            android:padding="16dp"
+                            android:text="Setting"
+                            android:textAllCaps="false"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="5dp"
+                            android:textFontWeight="600"
+                            android:textColor="@color/blue"
+                            android:textSize="20dp"
+                            android:textStyle="bold"
+                            tools:ignore="MissingConstraints" />
+
+
+
+                    </LinearLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
 
 
 

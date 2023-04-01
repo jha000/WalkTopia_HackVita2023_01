@@ -262,15 +262,18 @@ class homeFragment : Fragment(), SensorEventListener {
                             address.text =
                                 addresses!![0].subLocality + ", " + addresses[0].locality + ", " + addresses[0].adminArea
 
-                            city.text = addresses[0].postalCode
+                            city.text= addresses[0].postalCode
 
-                            val value = city.text.toString().trim { it <= ' ' }
+
+                            val value = addresses[0].latitude.toString().trim { it <= ' ' }
+                            val value2 = addresses[0].longitude.toString().trim { it <= ' ' }
                             val sharedPref = requireActivity().getSharedPreferences(
                                 "myKey",
                                 Context.MODE_PRIVATE
                             )
                             val editor = sharedPref.edit()
-                            editor.putString("pincode", value)
+                            editor.putString("lat", value)
+                            editor.putString("lon", value2)
                             editor.apply()
 
                         } catch (e: IOException) {

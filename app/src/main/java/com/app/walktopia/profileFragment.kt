@@ -14,13 +14,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.InputMethodManager
-import android.widget.Button
-import android.widget.EditText
-import android.widget.ImageView
-import android.widget.TextView
+import android.widget.*
 import androidx.fragment.app.Fragment
 import com.github.dhaval2404.imagepicker.ImagePicker
 import com.google.android.material.bottomsheet.BottomSheetDialog
+import com.google.firebase.auth.FirebaseAuth
 import java.io.ByteArrayOutputStream
 
 
@@ -116,29 +114,29 @@ class profileFragment : Fragment() {
 
 
 
-//        val logout = view.findViewById<Button>(R.id.logout)
-//        val userf = FirebaseAuth.getInstance().currentUser
-//        if (userf != null) {
-//            // User is signed in
-//            logout.text = "LOGOUT"
-//        }
-//        logout.setOnClickListener {
-//            if (userf != null) {
-//                val user = FirebaseAuth.getInstance()
-//                user.signOut()
-//                val intent = Intent(activity, MainActivity::class.java)
-//                startActivity(intent)
-//                requireActivity().finish()
-//                Toast.makeText(
-//                    requireActivity().applicationContext,
-//                    "Logout Successful",
-//                    Toast.LENGTH_SHORT
-//                ).show()
-//            } else {
-//                val intent = Intent(activity, MainActivity::class.java)
-//                startActivity(intent)
-//            }
-//        }
+        val logout = view.findViewById<Button>(R.id.logout)
+        val userf = FirebaseAuth.getInstance().currentUser
+        if (userf != null) {
+            // User is signed in
+            logout.text = "LOGOUT"
+        }
+        logout.setOnClickListener {
+            if (userf != null) {
+                val user = FirebaseAuth.getInstance()
+                user.signOut()
+                val intent = Intent(activity, loginSendOtp::class.java)
+                startActivity(intent)
+                requireActivity().finish()
+                Toast.makeText(
+                    requireActivity().applicationContext,
+                    "Logout Successful",
+                    Toast.LENGTH_SHORT
+                ).show()
+            } else {
+                val intent = Intent(activity, MainActivity::class.java)
+                startActivity(intent)
+            }
+        }
         cover.setOnClickListener {
             ImagePicker.with(this@profileFragment)
                 .crop()

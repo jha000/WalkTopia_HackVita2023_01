@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">WalkTopia</string>
+    <!-- TODO: Remove or change this placeholder text -->
+
+
+    <string-array name="custom">
+        <item>Steps</item>
+        <item>Distance</item>
+        <item>Time</item>
+    </string-array>
+
+</resources>

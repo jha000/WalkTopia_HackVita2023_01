@@ -1,0 +1,151 @@
+{
+  "project_info": {
+    "project_number": "602927643669",
+    "firebase_url": "https://fresh-yard-default-rtdb.firebaseio.com",
+    "project_id": "fresh-yard",
+    "storage_bucket": "fresh-yard.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:602927643669:android:2b5f5554a2d85b41a7e21c",
+        "android_client_info": {
+          "package_name": "com.app.walktopia"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "602927643669-9rtqopdulqif33uiu0j138l9780jdctk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCqdc7KcUuh5wLdS1FMvejO3IEPk3ZD14M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "602927643669-9rtqopdulqif33uiu0j138l9780jdctk.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "602927643669-npl97vtn00j91b5uuponqevbrps9ooqe.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.fresh.milkaggregatorapplication"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:602927643669:android:0b6b20944ec0d3faa7e21c",
+        "android_client_info": {
+          "package_name": "com.example.realtimerecycleview"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "602927643669-7sctoptasqcga8iu00fv6oboac15enhn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.realtimerecycleview",
+            "certificate_hash": "9bbb3186b2189ef16d8f272bdab59362c395cbb4"
+          }
+        },
+        {
+          "client_id": "602927643669-9rtqopdulqif33uiu0j138l9780jdctk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCqdc7KcUuh5wLdS1FMvejO3IEPk3ZD14M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "602927643669-9rtqopdulqif33uiu0j138l9780jdctk.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "602927643669-npl97vtn00j91b5uuponqevbrps9ooqe.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.fresh.milkaggregatorapplication"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:602927643669:android:8dfa9eccb1a7d4dda7e21c",
+        "android_client_info": {
+          "package_name": "com.fresh.milkaggregatorapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "602927643669-lurgidorbnvid6e7gv3s79stmunsvc1t.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.fresh.milkaggregatorapplication",
+            "certificate_hash": "31c0c92d37636b73b509b892f58b7d38796fccb4"
+          }
+        },
+        {
+          "client_id": "602927643669-m98435oeu4jgunlae3htqctriuhc6br0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.fresh.milkaggregatorapplication",
+            "certificate_hash": "463e93daf8c7da8fa90ef90b4480866b9204855d"
+          }
+        },
+        {
+          "client_id": "602927643669-n6qi623rro77c6lmqah805cln267poh6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.fresh.milkaggregatorapplication",
+            "certificate_hash": "9bbb3186b2189ef16d8f272bdab59362c395cbb4"
+          }
+        },
+        {
+          "client_id": "602927643669-9rtqopdulqif33uiu0j138l9780jdctk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCqdc7KcUuh5wLdS1FMvejO3IEPk3ZD14M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "602927643669-9rtqopdulqif33uiu0j138l9780jdctk.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "602927643669-npl97vtn00j91b5uuponqevbrps9ooqe.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.fresh.milkaggregatorapplication"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

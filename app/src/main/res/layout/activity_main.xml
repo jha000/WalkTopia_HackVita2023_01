@@ -8,6 +8,7 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
+
     <com.airbnb.lottie.LottieAnimationView
         android:layout_width="300dp"
         android:layout_height="300dp"
@@ -31,6 +32,8 @@
         android:textSize="25dp"
         android:textStyle="bold"
         tools:ignore="MissingConstraints" />
+
+
 
 
 

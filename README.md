@@ -2,32 +2,53 @@
 
 ## Table of Contents
 
+- [Designs](#designs)
 - [About](#about)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Contributing](#contributing)
 - [License](#license)
 
-### Homepage Wireframe Lofi Design 
-<img src="Resources/Wireframe/wireframe1.png" alt="Home Screen Image" width="300" height="550">
+# Designs
+## Wireframes
+### Homepage Lofi Design 
+<img src="Resources/Wireframe/home_page.png" alt="Home Screen Image" width="300" height="550">
 
+### Profile-Page Wireframe Lofi Design 
+<img src="Resources/Wireframe/profile_page.png" alt="Profile-Page Image" width="300" height="550">
 
-This is a description of my awesome Android app. It does all sorts of cool things and is designed to make your life easier. Here are some of the key features:
+### Theme Page(1) Wireframe Lofi Design 
+<img src="Resources/Wireframe/theme_page.png" alt="Theme Page" width="300" height="550">
 
-- Feature 1
-- Feature 2
-- Feature 3
+### Theme Page(2) Wireframe Lofi Design 
+<img src="Resources/Wireframe/theme_page_custom.png" alt="Theme Page Custom" width="300" height="550">
+
+# About
+
+The app is a fitness tracker that gamifies exercise by incorporating theme-based UI catering to nostalgic sentiments of users. Users can choose from a range of themes like Harry Potter or the Roman Empire, and enjoy rewards and points for exercising with friends. It also includes a multiplayer and leaderboard function and a marketplace for merchandise. Users can embark on adventures while exercising, like being Captain Jack Sparrow or Iron Man. Here are some of the key features:
+
+- Fitness
+- Adventure
+- Nostalgia
+- Rewards
+
+Machine Learning
+
+We have implemented sophisticated machine learning algorithms to incorporate smart recovry and recommender systems in our application. The [smart recovery](/WalkTopia_smart_Recovery_algorithm) and implementation of [recommender system algorithm](/WalkTopia_Theme_Recommender/) on our theme recommender has been done. The data set for the theme recommender can be found [here](https://drive.google.com/drive/folders/1Bbj2RJ8y9BLx4N3E9gthJ-nxFV9wlKRo?usp=share_link). Both the algorithms are a variation of a Recommender system. 
+
+![Recommender](/Resources/ml/recommender.png)
 
 ## Requirements
 
 - Android 6.0 or later
 - Internet connection
 
-## Installation
+# Installation
 
 1. Clone this repository
 2. Open the project in Android Studio
-3. Build and run the app on your device or emulator
+3. Build and run the app n your device or emulator
+4. [Download APK]()
 
 ## Version History
 
@@ -35,12 +56,8 @@ This is a description of my awesome Android app. It does all sorts of cool thing
 
 - Initial release
 
-### Version 1.1.0
 
-- Added feature 3
-- Bug fixes
-
-## Contributing
+# Contributing
 
 Contributions are welcome! If you'd like to contribute to the project, please follow these steps:
 
@@ -50,6 +67,6 @@ Contributions are welcome! If you'd like to contribute to the project, please fo
 4. Push your changes to your fork
 5. Submit a pull request
 
-## License
+# License
 
 This project is licensed under the [MIT License](/LICENSE).

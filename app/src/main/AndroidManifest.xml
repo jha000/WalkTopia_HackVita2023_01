@@ -19,6 +19,13 @@
         android:theme="@style/Theme.WalkTopia"
         tools:targetApi="31">
         <activity
+            android:name=".badges"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".map"
             android:exported="false">
             <meta-data

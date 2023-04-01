@@ -55,6 +55,12 @@ class themeFragment : Fragment() {
         val cs3 = view.findViewById<Button>(R.id.cs3)
         val cs4 = view.findViewById<Button>(R.id.cs4)
 
+//        val close = view.findViewById<ImageView>(R.id.back)
+//
+//        close.setOnClickListener{
+//            activity!!.onBackPressed()
+//        }
+
 
         cs1.setOnClickListener{
             val i= Intent(activity, map::class.java)

@@ -40,6 +40,13 @@ class profileFragment : Fragment() {
         val phoneEdit = view.findViewById<View>(R.id.phoneEdit) as ImageView
         val cover = view?.findViewById<View>(R.id.profile_image) as ImageView
 
+        val open = view.findViewById<View>(R.id.open) as TextView
+
+        open.setOnClickListener{
+            val i= Intent(activity, badges::class.java)
+            startActivity(i)
+        }
+
 
         nameEdit.setOnClickListener {
             myDialog.setContentView(R.layout.bottom)

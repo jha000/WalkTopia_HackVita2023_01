@@ -56,6 +56,17 @@ We have implemented sophisticated machine learning algorithms to incorporate sma
 
 - Initial release
 
+# Usage
+
+### Home Page
+<img src="Resources/app_screenshots/home_page.jpeg" alt="Home Page" width="300" height="550">
+
+### Theme Page
+<img src="Resources/app_screenshots/theme_page.jpeg" alt="Theme Page" width="300" height="550">
+
+### Profile Page
+<img src="Resources/app_screenshots/profile_page.jpeg" alt="Profile Page" width="300" height="550">
+
 
 # Contributing
 

@@ -8,8 +8,6 @@ import android.os.Bundle
 class dashboard : AppCompatActivity() {
     var bottom_navigation: BottomNavigationView? = null
     var HomeFragment = homeFragment()
-    var ProfileFragment = profileFragment()
-    var OrderFragement = walkFragnent()
     var ThemeFragment = themeFragment()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,20 +19,6 @@ class dashboard : AppCompatActivity() {
                 R.id.home -> {
                     supportFragmentManager.beginTransaction().replace(R.id.container, HomeFragment)
                         .commit()
-
-                    return@OnNavigationItemSelectedListener true
-                }
-
-                R.id.profile -> {
-                    supportFragmentManager.beginTransaction()
-                        .replace(R.id.container, ProfileFragment).commit()
-
-
-                    return@OnNavigationItemSelectedListener true
-                }
-                R.id.walk -> {
-                    supportFragmentManager.beginTransaction()
-                        .replace(R.id.container, OrderFragement).commit()
 
                     return@OnNavigationItemSelectedListener true
                 }
@@ -53,9 +37,9 @@ class dashboard : AppCompatActivity() {
     override fun onBackPressed() {
         val currentFragment =
             this.supportFragmentManager.findFragmentById(R.id.container)
-        if (currentFragment is profileFragment || currentFragment is walkFragnent) {
+        if (currentFragment is themeFragment) {
             supportFragmentManager.beginTransaction()
-                .apply { replace(R.id.container, HomeFragment) .commit() }
+                .apply { replace(R.id.container, HomeFragment).commit() }
         } else {
             super.onBackPressed()
         }

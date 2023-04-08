@@ -262,7 +262,7 @@ class homeFragment : Fragment(), SensorEventListener {
                             address.text =
                                 addresses!![0].subLocality + ", " + addresses[0].locality + ", " + addresses[0].adminArea
 
-                            city.text= addresses[0].postalCode
+                            city.text = addresses[0].postalCode
 
 
                             val value = addresses[0].latitude.toString().trim { it <= ' ' }
@@ -272,8 +272,8 @@ class homeFragment : Fragment(), SensorEventListener {
                                 Context.MODE_PRIVATE
                             )
                             val editor = sharedPref.edit()
-                            editor.putString("lat", value)
-                            editor.putString("lon", value2)
+                            editor.putFloat("lat", value.toFloat())
+                            editor.putFloat("lon", value2.toFloat())
                             editor.apply()
 
                         } catch (e: IOException) {

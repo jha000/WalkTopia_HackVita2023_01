@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
         Handler().postDelayed({
             val i = Intent(
                 this@MainActivity,
-                loginSendOtp::class.java
+                dashboard::class.java
             )
             startActivity(i)
             finish()

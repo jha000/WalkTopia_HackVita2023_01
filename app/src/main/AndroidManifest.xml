@@ -18,13 +18,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.WalkTopia"
         tools:targetApi="31">
-        <activity
-            android:name=".badges"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
+
         <activity
             android:name=".map"
             android:exported="false">
@@ -32,20 +26,7 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-        <activity
-            android:name=".ReceiveOTP"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name=".loginSendOtp"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
+
         <activity
             android:name=".dashboard"
             android:exported="false">

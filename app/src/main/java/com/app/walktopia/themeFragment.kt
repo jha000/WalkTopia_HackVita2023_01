@@ -1,8 +1,6 @@
 package com.app.walktopia
 
-import android.content.Context
 import android.content.Intent
-import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -10,7 +8,6 @@ import android.view.ViewGroup
 import android.widget.*
 import androidx.cardview.widget.CardView
 import androidx.fragment.app.Fragment
-
 
 class themeFragment : Fragment() {
 
@@ -47,6 +44,9 @@ class themeFragment : Fragment() {
         val close4 = view.findViewById<ImageView>(R.id.close4)
         val edit1 = view.findViewById<EditText>(R.id.edit1)
         val play = view.findViewById<TextView>(R.id.play)
+        val play2 = view.findViewById<TextView>(R.id.play2)
+        val play3 = view.findViewById<TextView>(R.id.play3)
+        val play4 = view.findViewById<TextView>(R.id.play4)
         val lat = view.findViewById<TextView>(R.id.lat)
         val lon = view.findViewById<TextView>(R.id.lon)
 
@@ -55,52 +55,51 @@ class themeFragment : Fragment() {
         val cs3 = view.findViewById<Button>(R.id.cs3)
         val cs4 = view.findViewById<Button>(R.id.cs4)
 
-//        val close = view.findViewById<ImageView>(R.id.back)
-//
-//        close.setOnClickListener{
-//            activity!!.onBackPressed()
-//        }
 
 
-        cs1.setOnClickListener{
-            val i= Intent(activity, map::class.java)
+        cs1.setOnClickListener {
+            val i = Intent(activity, map::class.java)
             startActivity(i)
         }
 
-        cs2.setOnClickListener{
-            val i= Intent(activity, map::class.java)
+        cs2.setOnClickListener {
+            val i = Intent(activity, map::class.java)
             startActivity(i)
         }
 
-        cs3.setOnClickListener{
-            val i= Intent(activity, map::class.java)
+        cs3.setOnClickListener {
+            val i = Intent(activity, map::class.java)
             startActivity(i)
         }
 
-        cs4.setOnClickListener{
-            val i= Intent(activity, map::class.java)
+        cs4.setOnClickListener {
+            val i = Intent(activity, map::class.java)
             startActivity(i)
         }
 
-
-
-
-        val sharedPreferences =
-            requireActivity().getSharedPreferences("myKey", Context.MODE_PRIVATE)
-        val value = sharedPreferences.getString("lat", "")
-        lat.text = value
-        val value1 = sharedPreferences.getString("lon", "")
-        lon.text = value1
 
         play.setOnClickListener {
 
-            val i= Intent(activity, map::class.java)
+            val i = Intent(activity, map::class.java)
             startActivity(i)
+        }
 
-//            val mapUri = Uri.parse("geo:0,0?q=")
-//            val mapIntent = Intent(Intent.ACTION_VIEW, mapUri)
-//            mapIntent.setPackage("com.google.android.apps.maps")
-//            startActivity(mapIntent)
+        play2.setOnClickListener {
+
+            val i = Intent(activity, map::class.java)
+            startActivity(i)
+        }
+
+        play3.setOnClickListener {
+
+            val i = Intent(activity, map::class.java)
+            startActivity(i)
+        }
+
+        play4.setOnClickListener {
+
+            val i = Intent(activity, map::class.java)
+            startActivity(i)
         }
 
 

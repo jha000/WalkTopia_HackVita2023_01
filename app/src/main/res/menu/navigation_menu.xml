@@ -16,20 +16,5 @@
 
         />
 
-    <item android:title="Market"
-        android:icon="@drawable/cart"
-        android:id="@+id/walk"
-        android:iconTint="@color/black"
-
-
-        />
-
-    <item android:title="Profile"
-        android:icon="@drawable/profile"
-        android:id="@+id/profile"
-        android:iconTint="@color/black"
-
-
-        />
 
 </menu>

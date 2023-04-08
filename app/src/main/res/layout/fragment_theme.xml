@@ -12,33 +12,33 @@
         android:id="@+id/lat"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
         android:layout_weight="1"
         android:background="@drawable/buttonbac"
         android:gravity="center"
-        android:layout_marginStart="16dp"
         android:padding="8dp"
         android:text=" Start "
-        android:visibility="gone"
         android:textAllCaps="true"
         android:textColor="@color/white"
         android:textSize="16dp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:visibility="gone" />
 
     <TextView
         android:id="@+id/lon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
         android:layout_weight="1"
         android:background="@drawable/buttonbac"
         android:gravity="center"
-        android:layout_marginStart="16dp"
         android:padding="8dp"
         android:text=" Start "
-        android:visibility="gone"
         android:textAllCaps="true"
         android:textColor="@color/white"
         android:textSize="16dp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:visibility="gone" />
 
     <LinearLayout
         android:id="@+id/selectiontop"
@@ -53,9 +53,9 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
-            android:layout_gravity="center_vertical"
             android:layout_marginEnd="5dp"
             android:layout_marginBottom="16dp"
             android:src="@drawable/back"
@@ -70,21 +70,20 @@
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
             android:layout_marginBottom="16dp"
-            android:elevation="10dp"
             android:background="@drawable/ba"
+            android:elevation="10dp"
             android:orientation="horizontal"
-            app:layout_constraintTop_toBottomOf="@+id/constraintLayout2"
-            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            >
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginBottom="16dp"
-                android:layout_gravity="center_vertical"
                 android:src="@drawable/search"
                 app:tint="@color/black"
                 tools:ignore="ContentDescription" />
@@ -92,15 +91,15 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
                 android:layout_marginStart="10dp"
-                android:layout_weight="1"
+                android:layout_marginTop="16dp"
                 android:layout_marginEnd="10dp"
+                android:layout_marginBottom="16dp"
+                android:layout_weight="1"
+                android:alpha="0.5"
                 android:fontFamily="@font/urbanist"
                 android:text="search"
-                android:alpha="0.5"
-                android:layout_gravity="center_vertical"
-                android:layout_marginTop="16dp"
-                android:layout_marginBottom="16dp"
                 android:textAllCaps="false"
                 android:textColor="@color/black"
                 android:textFontWeight="600"
@@ -108,24 +107,11 @@
                 android:textStyle="bold" />
 
 
-
-
         </LinearLayout>
-
 
 
     </LinearLayout>
 
-
-    <!--    <View-->
-    <!--        android:layout_width="match_parent"-->
-    <!--        android:layout_height="1dp"-->
-    <!--        android:id="@+id/view"-->
-    <!--        android:alpha="0.2"-->
-    <!--        app:layout_constraintTop_toBottomOf="@+id/selectiontop"-->
-    <!--        app:layout_constraintStart_toStartOf="parent"-->
-    <!--        app:layout_constraintEnd_toEndOf="parent"-->
-    <!--        android:background="@color/black"/>-->
 
     <ScrollView
         android:layout_width="match_parent"
@@ -160,15 +146,15 @@
 
                 <androidx.cardview.widget.CardView
 
-                    android:layout_width="match_parent"
                     android:id="@+id/card1"
+                    android:layout_width="match_parent"
                     android:layout_height="200dp"
                     android:layout_marginStart="16dp"
-                    android:layout_marginEnd="16dp"
                     android:layout_marginTop="8dp"
-                    android:visibility="visible"
+                    android:layout_marginEnd="16dp"
                     android:layout_marginBottom="16dp"
                     android:orientation="vertical"
+                    android:visibility="visible"
                     app:cardCornerRadius="16dp"
 
                     app:cardElevation="0dp"
@@ -216,10 +202,10 @@
                                     android:id="@+id/play"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
+                                    android:layout_marginStart="16dp"
                                     android:layout_weight="1"
                                     android:background="@drawable/buttonbac"
                                     android:gravity="center"
-                                    android:layout_marginStart="16dp"
                                     android:padding="8dp"
                                     android:text=" Start "
                                     android:textAllCaps="true"
@@ -241,22 +227,19 @@
 
                 <androidx.cardview.widget.CardView
 
-                    android:layout_width="match_parent"
                     android:id="@+id/show1"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
                     android:layout_marginEnd="16dp"
                     android:layout_marginBottom="16dp"
                     android:orientation="vertical"
-                    app:cardCornerRadius="16dp"
                     android:visibility="gone"
+                    app:cardCornerRadius="16dp"
 
                     app:cardElevation="0dp"
 
                     app:layout_constraintTop_toBottomOf="@+id/card">
-
-
-
 
 
                     <LinearLayout
@@ -271,15 +254,14 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="16dp"
-                            android:orientation="horizontal"
-                            >
+                            android:orientation="horizontal">
 
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_weight="1"
                                 android:layout_marginStart="16dp"
+                                android:layout_weight="1"
                                 android:text="Custom Workout"
                                 android:textAllCaps="false"
                                 android:textColor="@color/blue"
@@ -287,13 +269,12 @@
                                 android:textStyle="bold" />
 
                             <ImageView
+                                android:id="@+id/close1"
                                 android:layout_width="25dp"
                                 android:layout_height="25dp"
-                                android:id="@+id/close1"
-                                android:layout_marginEnd="16dp"
                                 android:layout_gravity="center_vertical"
-                                android:src="@drawable/close2"
-                                />
+                                android:layout_marginEnd="16dp"
+                                android:src="@drawable/close2" />
 
                         </LinearLayout>
 
@@ -301,8 +282,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="16dp"
-                            android:orientation="horizontal"
-                            >
+                            android:orientation="horizontal">
 
 
                             <TextView
@@ -318,8 +298,8 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_weight="1"
                                 android:layout_marginStart="16dp"
+                                android:layout_weight="1"
                                 android:text="Harry Potter"
                                 android:textAllCaps="false"
                                 android:textColor="@color/black"
@@ -362,18 +342,17 @@
                             android:layout_marginTop="20dp"
                             android:layout_marginEnd="16dp"
                             android:layout_marginBottom="16dp"
-                            android:orientation="horizontal"
-                            >
+                            android:orientation="horizontal">
 
                             <EditText
-                                android:layout_width="wrap_content"
                                 android:id="@+id/edit1"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:layout_marginEnd="10dp"
+                                android:layout_weight="1"
                                 android:fontFamily="@font/urbanist"
                                 android:hint="enter value"
-                                android:layout_weight="1"
                                 android:textColor="@color/black"
-                                android:layout_marginEnd="10dp"
                                 android:textFontWeight="600"
                                 android:textSize="16dp" />
 
@@ -395,21 +374,19 @@
                         </LinearLayout>
 
 
-
                     </LinearLayout>
-
 
 
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
 
+                    android:id="@+id/card3"
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
                     android:layout_margin="16dp"
                     android:orientation="vertical"
                     app:cardCornerRadius="16dp"
-                    android:id="@+id/card3"
 
                     app:cardElevation="0dp"
 
@@ -457,17 +434,16 @@
                                     android:id="@+id/play3"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
+                                    android:layout_marginStart="16dp"
                                     android:layout_weight="1"
                                     android:background="@drawable/buttonbac"
                                     android:gravity="center"
-                                    android:layout_marginStart="16dp"
                                     android:padding="8dp"
                                     android:text=" Start "
                                     android:textAllCaps="true"
                                     android:textColor="@color/white"
                                     android:textSize="16dp"
                                     android:textStyle="bold" />
-
 
 
                             </LinearLayout>
@@ -483,22 +459,19 @@
 
                 <androidx.cardview.widget.CardView
 
-                    android:layout_width="match_parent"
                     android:id="@+id/show3"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
                     android:layout_marginEnd="16dp"
                     android:layout_marginBottom="16dp"
                     android:orientation="vertical"
-                    app:cardCornerRadius="16dp"
                     android:visibility="gone"
+                    app:cardCornerRadius="16dp"
 
                     app:cardElevation="0dp"
 
                     app:layout_constraintTop_toBottomOf="@+id/card">
-
-
-
 
 
                     <LinearLayout
@@ -514,15 +487,14 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="16dp"
-                            android:orientation="horizontal"
-                            >
+                            android:orientation="horizontal">
 
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_weight="1"
                                 android:layout_marginStart="16dp"
+                                android:layout_weight="1"
                                 android:text="Custom Workout"
                                 android:textAllCaps="false"
                                 android:textColor="@color/blue"
@@ -530,13 +502,12 @@
                                 android:textStyle="bold" />
 
                             <ImageView
+                                android:id="@+id/close3"
                                 android:layout_width="25dp"
                                 android:layout_height="25dp"
-                                android:id="@+id/close3"
-                                android:layout_marginEnd="16dp"
                                 android:layout_gravity="center_vertical"
-                                android:src="@drawable/close2"
-                                />
+                                android:layout_marginEnd="16dp"
+                                android:src="@drawable/close2" />
 
                         </LinearLayout>
 
@@ -544,8 +515,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="16dp"
-                            android:orientation="horizontal"
-                            >
+                            android:orientation="horizontal">
 
 
                             <TextView
@@ -561,8 +531,8 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_weight="1"
                                 android:layout_marginStart="16dp"
+                                android:layout_weight="1"
                                 android:text="Narutto"
                                 android:textAllCaps="false"
                                 android:textColor="@color/black"
@@ -605,28 +575,27 @@
                             android:layout_marginTop="20dp"
                             android:layout_marginEnd="16dp"
                             android:layout_marginBottom="16dp"
-                            android:orientation="horizontal"
-                            >
+                            android:orientation="horizontal">
 
                             <EditText
-                                android:layout_width="wrap_content"
                                 android:id="@+id/edit3"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:layout_marginEnd="10dp"
+                                android:layout_weight="1"
                                 android:fontFamily="@font/urbanist"
                                 android:hint="enter value"
-                                android:layout_weight="1"
                                 android:textColor="@color/black"
-                                android:layout_marginEnd="10dp"
                                 android:textFontWeight="600"
                                 android:textSize="16dp" />
 
                             <Button
 
+                                android:id="@+id/cs2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:backgroundTint="@color/blue"
                                 android:clickable="true"
-                                android:id="@+id/cs2"
                                 android:fontFamily="@font/urbanist"
                                 android:padding="10dp"
                                 android:text="Start"
@@ -639,21 +608,19 @@
                         </LinearLayout>
 
 
-
                     </LinearLayout>
-
 
 
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
 
+                    android:id="@+id/card4"
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
                     android:layout_margin="16dp"
                     android:orientation="vertical"
                     app:cardCornerRadius="16dp"
-                    android:id="@+id/card4"
 
                     app:cardElevation="0dp"
 
@@ -701,17 +668,16 @@
                                     android:id="@+id/play4"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
+                                    android:layout_marginStart="16dp"
                                     android:layout_weight="1"
                                     android:background="@drawable/buttonbac"
                                     android:gravity="center"
-                                    android:layout_marginStart="16dp"
                                     android:padding="8dp"
                                     android:text=" Start "
                                     android:textAllCaps="true"
                                     android:textColor="@color/white"
                                     android:textSize="16dp"
                                     android:textStyle="bold" />
-
 
 
                             </LinearLayout>
@@ -727,22 +693,19 @@
 
                 <androidx.cardview.widget.CardView
 
-                    android:layout_width="match_parent"
                     android:id="@+id/show4"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
                     android:layout_marginEnd="16dp"
                     android:layout_marginBottom="16dp"
                     android:orientation="vertical"
-                    app:cardCornerRadius="16dp"
                     android:visibility="gone"
+                    app:cardCornerRadius="16dp"
 
                     app:cardElevation="0dp"
 
                     app:layout_constraintTop_toBottomOf="@+id/card">
-
-
-
 
 
                     <LinearLayout
@@ -758,15 +721,14 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="16dp"
-                            android:orientation="horizontal"
-                            >
+                            android:orientation="horizontal">
 
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_weight="1"
                                 android:layout_marginStart="16dp"
+                                android:layout_weight="1"
                                 android:text="Custom Workout"
                                 android:textAllCaps="false"
                                 android:textColor="@color/blue"
@@ -774,13 +736,12 @@
                                 android:textStyle="bold" />
 
                             <ImageView
+                                android:id="@+id/close4"
                                 android:layout_width="25dp"
                                 android:layout_height="25dp"
-                                android:id="@+id/close4"
-                                android:layout_marginEnd="16dp"
                                 android:layout_gravity="center_vertical"
-                                android:src="@drawable/close2"
-                                />
+                                android:layout_marginEnd="16dp"
+                                android:src="@drawable/close2" />
 
                         </LinearLayout>
 
@@ -788,8 +749,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="16dp"
-                            android:orientation="horizontal"
-                            >
+                            android:orientation="horizontal">
 
 
                             <TextView
@@ -805,8 +765,8 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_weight="1"
                                 android:layout_marginStart="16dp"
+                                android:layout_weight="1"
                                 android:text="Iron man"
                                 android:textAllCaps="false"
                                 android:textColor="@color/black"
@@ -849,28 +809,27 @@
                             android:layout_marginTop="20dp"
                             android:layout_marginEnd="16dp"
                             android:layout_marginBottom="16dp"
-                            android:orientation="horizontal"
-                            >
+                            android:orientation="horizontal">
 
                             <EditText
-                                android:layout_width="wrap_content"
                                 android:id="@+id/edit4"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:layout_marginEnd="10dp"
+                                android:layout_weight="1"
                                 android:fontFamily="@font/urbanist"
                                 android:hint="enter value"
-                                android:layout_weight="1"
                                 android:textColor="@color/black"
-                                android:layout_marginEnd="10dp"
                                 android:textFontWeight="600"
                                 android:textSize="16dp" />
 
                             <Button
 
+                                android:id="@+id/cs3"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:backgroundTint="@color/blue"
                                 android:clickable="true"
-                                android:id="@+id/cs3"
                                 android:fontFamily="@font/urbanist"
                                 android:padding="10dp"
                                 android:text="Start"
@@ -883,21 +842,19 @@
                         </LinearLayout>
 
 
-
                     </LinearLayout>
-
 
 
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
 
+                    android:id="@+id/card2"
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
                     android:layout_margin="16dp"
                     android:orientation="vertical"
                     app:cardCornerRadius="16dp"
-                    android:id="@+id/card2"
 
                     app:cardElevation="0dp"
 
@@ -944,8 +901,8 @@
                                     android:id="@+id/play2"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_weight="1"
                                     android:layout_marginStart="16dp"
+                                    android:layout_weight="1"
                                     android:background="@drawable/buttonbac"
                                     android:gravity="center"
                                     android:padding="8dp"
@@ -969,22 +926,19 @@
 
                 <androidx.cardview.widget.CardView
 
-                    android:layout_width="match_parent"
                     android:id="@+id/show2"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
                     android:layout_marginEnd="16dp"
                     android:layout_marginBottom="16dp"
                     android:orientation="vertical"
-                    app:cardCornerRadius="16dp"
                     android:visibility="gone"
+                    app:cardCornerRadius="16dp"
 
                     app:cardElevation="0dp"
 
                     app:layout_constraintTop_toBottomOf="@+id/card">
-
-
-
 
 
                     <LinearLayout
@@ -1000,15 +954,14 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="16dp"
-                            android:orientation="horizontal"
-                            >
+                            android:orientation="horizontal">
 
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_weight="1"
                                 android:layout_marginStart="16dp"
+                                android:layout_weight="1"
                                 android:text="Custom Workout"
                                 android:textAllCaps="false"
                                 android:textColor="@color/blue"
@@ -1016,13 +969,12 @@
                                 android:textStyle="bold" />
 
                             <ImageView
+                                android:id="@+id/close2"
                                 android:layout_width="25dp"
                                 android:layout_height="25dp"
-                                android:id="@+id/close2"
-                                android:layout_marginEnd="16dp"
                                 android:layout_gravity="center_vertical"
-                                android:src="@drawable/close2"
-                                />
+                                android:layout_marginEnd="16dp"
+                                android:src="@drawable/close2" />
 
                         </LinearLayout>
 
@@ -1030,8 +982,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="16dp"
-                            android:orientation="horizontal"
-                            >
+                            android:orientation="horizontal">
 
 
                             <TextView
@@ -1047,8 +998,8 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_weight="1"
                                 android:layout_marginStart="16dp"
+                                android:layout_weight="1"
                                 android:text="Tin Tin"
                                 android:textAllCaps="false"
                                 android:textColor="@color/black"
@@ -1091,28 +1042,27 @@
                             android:layout_marginTop="20dp"
                             android:layout_marginEnd="16dp"
                             android:layout_marginBottom="16dp"
-                            android:orientation="horizontal"
-                            >
+                            android:orientation="horizontal">
 
                             <EditText
-                                android:layout_width="wrap_content"
                                 android:id="@+id/edit2"
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:layout_marginEnd="10dp"
+                                android:layout_weight="1"
                                 android:fontFamily="@font/urbanist"
                                 android:hint="enter value"
-                                android:layout_weight="1"
                                 android:textColor="@color/black"
-                                android:layout_marginEnd="10dp"
                                 android:textFontWeight="600"
                                 android:textSize="16dp" />
 
                             <Button
 
+                                android:id="@+id/cs4"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:backgroundTint="@color/blue"
                                 android:clickable="true"
-                                android:id="@+id/cs4"
                                 android:fontFamily="@font/urbanist"
                                 android:padding="10dp"
                                 android:text="Start"
@@ -1125,9 +1075,7 @@
                         </LinearLayout>
 
 
-
                     </LinearLayout>
-
 
 
                 </androidx.cardview.widget.CardView>

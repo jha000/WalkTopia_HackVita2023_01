@@ -12,16 +12,16 @@
 # Designs
 ## Wireframes
 ### Homepage Lofi Design 
-<img src="Resources/Wireframe/home_page.png" alt="Home Screen Image" width="300" height="550">
+<img src="Resources/Wireframe/home_page.png" alt="Home Screen Image" width="300" height="620">
 
 ### Profile-Page Wireframe Lofi Design 
-<img src="Resources/Wireframe/profile_page.png" alt="Profile-Page Image" width="300" height="550">
+<img src="Resources/Wireframe/profile_page.png" alt="Profile-Page Image" width="300" height="620">
 
 ### Theme Page(1) Wireframe Lofi Design 
-<img src="Resources/Wireframe/theme_page.png" alt="Theme Page" width="300" height="550">
+<img src="Resources/Wireframe/theme_page.png" alt="Theme Page" width="300" height="620">
 
 ### Theme Page(2) Wireframe Lofi Design 
-<img src="Resources/Wireframe/theme_page_custom.png" alt="Theme Page Custom" width="300" height="550">
+<img src="Resources/Wireframe/theme_page_custom.png" alt="Theme Page Custom" width="300" height="620">
 
 # About
 
@@ -48,7 +48,6 @@ We have implemented sophisticated machine learning algorithms to incorporate sma
 1. Clone this repository
 2. Open the project in Android Studio
 3. Build and run the app n your device or emulator
-4. [Download APK]()
 
 ## Version History
 

@@ -2,26 +2,11 @@
 
 ## Table of Contents
 
-- [Designs](#designs)
 - [About](#about)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Contributing](#contributing)
 - [License](#license)
-
-# Designs
-## Wireframes
-### Homepage Lofi Design 
-<img src="Resources/Wireframe/home_page.png" alt="Home Screen Image" width="300" height="620">
-
-### Profile-Page Wireframe Lofi Design 
-<img src="Resources/Wireframe/profile_page.png" alt="Profile-Page Image" width="300" height="620">
-
-### Theme Page(1) Wireframe Lofi Design 
-<img src="Resources/Wireframe/theme_page.png" alt="Theme Page" width="300" height="620">
-
-### Theme Page(2) Wireframe Lofi Design 
-<img src="Resources/Wireframe/theme_page_custom.png" alt="Theme Page Custom" width="300" height="620">
 
 # About
 
@@ -31,12 +16,6 @@ The app is a fitness tracker that gamifies exercise by incorporating theme-based
 - Adventure
 - Nostalgia
 - Rewards
-
-Machine Learning
-
-We have implemented sophisticated machine learning algorithms to incorporate smart recovry and recommender systems in our application. The [smart recovery](/WalkTopia_smart_Recovery_algorithm) and implementation of [recommender system algorithm](/WalkTopia_Theme_Recommender/) on our theme recommender has been done. The data set for the theme recommender can be found [here](https://drive.google.com/drive/folders/1Bbj2RJ8y9BLx4N3E9gthJ-nxFV9wlKRo?usp=share_link). Both the algorithms are a variation of a Recommender system. 
-
-![Recommender](/Resources/ml/recommender.png)
 
 ## Requirements
 

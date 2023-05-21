@@ -9,6 +9,8 @@ class dashboard : AppCompatActivity() {
     var bottom_navigation: BottomNavigationView? = null
     var HomeFragment = homeFragment()
     var ThemeFragment = themeFragment()
+    var ProfileFragment = profileFragment()
+    var SettingFragment = settingFragment()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_dashboard)
@@ -26,6 +28,20 @@ class dashboard : AppCompatActivity() {
                 R.id.themes -> {
                     supportFragmentManager.beginTransaction()
                         .replace(R.id.container, ThemeFragment).commit()
+
+                    return@OnNavigationItemSelectedListener true
+                }
+
+                R.id.profile -> {
+                    supportFragmentManager.beginTransaction()
+                        .replace(R.id.container, ProfileFragment).commit()
+
+                    return@OnNavigationItemSelectedListener true
+                }
+
+                R.id.setting -> {
+                    supportFragmentManager.beginTransaction()
+                        .replace(R.id.container, SettingFragment).commit()
 
                     return@OnNavigationItemSelectedListener true
                 }

@@ -3,6 +3,7 @@
 
     <item android:title="Home"
         android:icon="@drawable/home"
+        android:iconTint="@color/black"
         android:id="@+id/home"
 
         />
@@ -10,18 +11,21 @@
     <item android:title="Themes"
         android:icon="@drawable/themes"
         android:id="@+id/themes"
+        android:iconTint="@color/black"
 
         />
 
     <item android:title="Profile"
         android:icon="@drawable/person"
         android:id="@+id/profile"
+        android:iconTint="@color/blue"
 
         />
 
     <item android:title="Setting"
         android:icon="@drawable/setting"
         android:id="@+id/setting"
+        android:iconTint="@color/black"
 
         />
 

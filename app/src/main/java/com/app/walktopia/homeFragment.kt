@@ -2,7 +2,11 @@ package com.app.walktopia
 
 import android.Manifest
 import android.content.Context
+import android.content.Intent
 import android.content.pm.PackageManager
+import android.graphics.Bitmap
+import android.graphics.BitmapFactory
+import android.graphics.drawable.BitmapDrawable
 import android.hardware.Sensor
 import android.hardware.SensorEvent
 import android.hardware.SensorEventListener
@@ -11,19 +15,23 @@ import android.location.Address
 import android.location.Geocoder
 import android.os.Build
 import android.os.Bundle
+import android.util.Base64
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
+import com.github.dhaval2404.imagepicker.ImagePicker
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
 import com.mikhaellopez.circularprogressbar.CircularProgressBar
+import java.io.ByteArrayOutputStream
 import java.io.IOException
 import java.util.*
 
@@ -37,6 +45,7 @@ class homeFragment : Fragment(), SensorEventListener {
     private lateinit var stepsTaken: TextView
     lateinit var progress: CircularProgressBar
     lateinit var address: TextView
+    lateinit var person: ImageView
     lateinit var city: TextView
     lateinit var calories: TextView
     lateinit var distance: TextView
@@ -61,6 +70,18 @@ class homeFragment : Fragment(), SensorEventListener {
         city = view.findViewById(R.id.city)
         distance = view.findViewById(R.id.distance)
         calories = view.findViewById(R.id.calories)
+        person = view.findViewById(R.id.person)
+
+        person.setOnClickListener {
+            ImagePicker.with(this@homeFragment)
+                .crop()
+                .compress(1024)
+                .maxResultSize(
+                    1080,
+                    1080
+                )
+                .start()
+        }
 
         val sharedPreferences =
             requireActivity().getSharedPreferences("myKey", Context.MODE_PRIVATE)
@@ -70,6 +91,13 @@ class homeFragment : Fragment(), SensorEventListener {
         distance.text = value2
         val value3 = sharedPreferences.getString("calories", "0")
         calories.text = value3
+
+        val base64: String? = sharedPreferences.getString("image", null)
+        if (base64 != null && base64.isNotEmpty()) {
+            val byteArray = Base64.decode(base64, Base64.DEFAULT)
+            val bitmap = BitmapFactory.decodeByteArray(byteArray, 0, byteArray.size)
+            person.setImageBitmap(bitmap)
+        }
 
         progress.apply {
             setProgressWithAnimation(stepsTaken.text.toString().toFloat())
@@ -105,11 +133,11 @@ class homeFragment : Fragment(), SensorEventListener {
         val stepSensor: Sensor? = sensorManager?.getDefaultSensor(Sensor.TYPE_STEP_COUNTER)
 
         if (stepSensor == null) {
-            Toast.makeText(
-                requireContext(),
-                "No sensor detected on this device",
-                Toast.LENGTH_SHORT
-            ).show()
+//            Toast.makeText(
+//                requireContext(),
+//                "No sensor detected on this device",
+//                Toast.LENGTH_SHORT
+//            ).show()
         } else {
             sensorManager?.registerListener(this, stepSensor, SensorManager.SENSOR_DELAY_UI)
         }
@@ -292,6 +320,23 @@ class homeFragment : Fragment(), SensorEventListener {
             arrayOf(Manifest.permission.ACCESS_FINE_LOCATION),
             REQUEST_CODE
         )
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        val selectedImg = data!!.data
+        person.setImageURI(selectedImg)
+
+        val bitmap = (person.drawable as BitmapDrawable).bitmap
+        val byteArrayOutputStream = ByteArrayOutputStream()
+        bitmap.compress(Bitmap.CompressFormat.PNG, 100, byteArrayOutputStream)
+        val byteArray = byteArrayOutputStream.toByteArray()
+        val base64 = Base64.encodeToString(byteArray, Base64.DEFAULT)
+
+        val sharedPreferences = requireActivity().getSharedPreferences("myKey", Context.MODE_PRIVATE)
+        val editor = sharedPreferences.edit()
+        editor.putString("image", base64)
+        editor.apply()
     }
 
 

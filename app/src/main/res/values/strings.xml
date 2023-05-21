@@ -10,5 +10,7 @@
     </string-array>
 
     <string name="api">AIzaSyDkZ9a6nJYcceeqGq38y_wQM-JDIrz5usg</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

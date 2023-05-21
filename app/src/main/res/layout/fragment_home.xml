@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/bac"
     android:orientation="vertical"
     tools:context=".homeFragment">
+
 
     <LinearLayout
         android:id="@+id/constraintLayout2"
@@ -24,10 +25,10 @@
             android:id="@+id/locationid"
             android:layout_width="32dp"
             android:layout_height="32dp"
+            android:layout_gravity="center_vertical"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:layout_marginBottom="16dp"
-            android:layout_gravity="center_vertical"
             android:src="@drawable/location"
             app:tint="@color/white"
             tools:ignore="ContentDescription" />
@@ -36,10 +37,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:layout_weight="1"
             android:layout_marginTop="16dp"
-            android:layout_marginBottom="16dp"
             android:layout_marginEnd="10dp"
+            android:layout_marginBottom="16dp"
+            android:layout_weight="1"
             android:orientation="vertical">
 
             <TextView
@@ -70,13 +71,15 @@
 
         </LinearLayout>
 
-        <ImageView
-            android:id="@+id/cart"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/person"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:layout_gravity="center_vertical"
-            app:tint="@color/black"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:src="@drawable/pic"
             tools:ignore="ContentDescription" />
 
 
@@ -84,236 +87,252 @@
 
 
     <LinearLayout
-        android:id="@+id/search"
+        android:id="@+id/welcome"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="-25dp"
-        android:layout_marginEnd="12dp"
-        android:visibility="invisible"
-        android:elevation="10dp"
-        android:background="@drawable/ba"
-        android:orientation="horizontal"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        >
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginBottom="16dp"
-            android:layout_gravity="center_vertical"
-            android:src="@drawable/search"
-            app:tint="@color/black"
-            tools:ignore="ContentDescription" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:fontFamily="@font/urbanist"
-            android:text="search"
-            android:alpha="0.5"
-            android:layout_gravity="center_vertical"
-            android:layout_marginTop="16dp"
-            android:layout_marginBottom="16dp"
-            android:textAllCaps="false"
-            android:textColor="@color/black"
-            android:textFontWeight="600"
-            android:textSize="16dp"
-            android:textStyle="bold" />
-
-
-
-
-    </LinearLayout>
-
-
-
-    <com.mikhaellopez.circularprogressbar.CircularProgressBar
-        android:id="@+id/progress_circular"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:layout_marginTop="16dp"
-        app:cpb_background_progressbar_color="#F2F2F2"
-        app:cpb_background_progressbar_width="20dp"
-        app:cpb_progress_max="2500"
-        app:cpb_progressbar_color="@color/blue"
-        app:cpb_progressbar_width="15dp"
-        app:cpb_round_border="true"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/search" />
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        app:layout_constraintStart_toStartOf="@+id/progress_circular"
-        app:layout_constraintEnd_toEndOf="@+id/progress_circular"
-        app:layout_constraintTop_toTopOf="@+id/progress_circular"
-        app:layout_constraintBottom_toBottomOf="@+id/progress_circular"
+        android:background="@drawable/rectangle"
         android:orientation="vertical"
-        >
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
 
         <TextView
-            android:id="@+id/stepsTaken"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
             android:fontFamily="@font/urbanist"
-            android:text="0"
+            android:text="Hi Jha"
             android:textAllCaps="false"
-            android:textColor="@color/black"
-            android:textFontWeight="600"
-            android:textSize="40dp"
+            android:textColor="@color/white"
+            android:textFontWeight="400"
+            android:textSize="20dp"
             android:textStyle="bold" />
 
-        <LinearLayout
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            >
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/urbanist"
-                android:text="/"
-                android:layout_gravity="center_vertical"
-                android:textAllCaps="false"
-                android:textColor="@color/black"
-                android:textFontWeight="800"
-                android:textSize="18dp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/urbanist"
-                android:text="2500"
-                android:layout_gravity="center_vertical"
-                android:textAllCaps="false"
-                android:textColor="@color/black"
-                android:textFontWeight="600"
-                android:textSize="14dp"
-                android:textStyle="bold" />
-
-        </LinearLayout>
-
-
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="32dp"
+            android:fontFamily="@font/urbanist"
+            android:text="Welcome Back"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textFontWeight="600"
+            android:textSize="25dp"
+            android:textStyle="bold" />
 
     </LinearLayout>
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/status"
-        android:layout_marginTop="40dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:orientation="horizontal"
-        app:layout_constraintTop_toBottomOf="@+id/progress_circular"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        >
+        android:layout_height="0dp"
+        android:overScrollMode="ifContentScrolls"
+        android:scrollbars="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/welcome"
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="16dp">
 
-        <LinearLayout
-            android:layout_width="wrap_content"
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/test"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:orientation="vertical"
+            android:layout_marginBottom="16dp"
+
             >
 
-            <ImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:src="@drawable/calories"
-                app:tint="@color/red"
-                android:layout_marginBottom="5dp"
-                tools:ignore="ContentDescription" />
+            <com.mikhaellopez.circularprogressbar.CircularProgressBar
+                android:id="@+id/progress_circular"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_marginTop="32dp"
+                app:cpb_background_progressbar_color="#F2F2F2"
+                app:cpb_background_progressbar_width="20dp"
+                app:cpb_progress_max="2500"
+                app:cpb_progressbar_color="@color/blue"
+                app:cpb_progressbar_width="15dp"
+                app:cpb_round_border="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
 
+            <LinearLayout
+                android:id="@+id/linearLayout"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/urbanist"
-                android:text="78.9"
-                android:id="@+id/calories"
-                android:textAllCaps="false"
-                android:textColor="@color/black"
-                android:textFontWeight="600"
-                android:textSize="32dp"
-                android:textStyle="bold" />
+                android:gravity="center"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="@+id/progress_circular"
+                app:layout_constraintEnd_toEndOf="@+id/progress_circular"
+                app:layout_constraintStart_toStartOf="@+id/progress_circular"
+                app:layout_constraintTop_toTopOf="@+id/progress_circular">
 
-            <TextView
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/footstep" />
 
-                android:layout_width="wrap_content"
+                <TextView
+                    android:id="@+id/stepsTaken"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/urbanist"
+                    android:text="0"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textFontWeight="600"
+                    android:textSize="40dp"
+                    android:textStyle="bold" />
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:fontFamily="@font/urbanist"
+                        android:text="/"
+                        android:textAllCaps="false"
+                        android:textColor="@color/black"
+                        android:textFontWeight="400"
+                        android:textSize="18dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:fontFamily="@font/urbanist"
+                        android:text="2500"
+                        android:textAllCaps="false"
+                        android:textColor="@color/black"
+                        android:textFontWeight="400"
+                        android:textSize="12dp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/status"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/urbanist"
-                android:text="kcal"
-                android:textAllCaps="false"
-                android:textColor="@color/black"
-                android:textFontWeight="600"
-                android:textSize="14dp"
-                android:textStyle="bold" />
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="16dp"
+                android:orientation="horizontal"
+                android:paddingBottom="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/progress_circular">
 
-        </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
 
-        <View
-            android:layout_width="0.5dp"
-            android:layout_height="match_parent"
-            android:alpha="0.2"
-            android:background="@color/black"/>
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginBottom="5dp"
+                        android:src="@drawable/calories"
+                        app:tint="@color/red"
+                        tools:ignore="ContentDescription" />
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:orientation="vertical"
-            >
+                    <TextView
 
-            <ImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:src="@drawable/distance"
-                android:layout_marginBottom="5dp"
-                tools:ignore="ContentDescription" />
+                        android:id="@+id/calories"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/urbanist"
+                        android:text="78.9"
+                        android:textAllCaps="false"
+                        android:textColor="@color/black"
+                        android:textFontWeight="600"
+                        android:textSize="32dp"
+                        android:textStyle="bold" />
 
-            <TextView
+                    <TextView
 
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/urbanist"
-                android:text="564"
-                android:textAllCaps="false"
-                android:id="@+id/distance"
-                android:textColor="@color/black"
-                android:textFontWeight="600"
-                android:textSize="32dp"
-                android:textStyle="bold" />
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/urbanist"
+                        android:text="kcal"
+                        android:textAllCaps="false"
+                        android:textColor="@color/black"
+                        android:textFontWeight="400"
+                        android:textSize="12dp"
+                        android:textStyle="bold" />
 
-            <TextView
+                </LinearLayout>
 
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/urbanist"
-                android:text="meters"
-                android:textAllCaps="false"
-                android:textColor="@color/black"
-                android:textFontWeight="600"
-                android:textSize="14dp"
-                android:textStyle="bold" />
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:alpha="0.2"
+                    android:background="@color/black" />
 
-        </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
 
-    </LinearLayout>
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginBottom="5dp"
+                        android:src="@drawable/distance"
+                        tools:ignore="ContentDescription" />
 
+                    <TextView
 
+                        android:id="@+id/distance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/urbanist"
+                        android:text="564"
+                        android:textAllCaps="false"
+                        android:textColor="@color/black"
+                        android:textFontWeight="600"
+                        android:textSize="32dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/urbanist"
+                        android:text="meters"
+                        android:textAllCaps="false"
+                        android:textColor="@color/black"
+                        android:textFontWeight="400"
+                        android:textSize="12dp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

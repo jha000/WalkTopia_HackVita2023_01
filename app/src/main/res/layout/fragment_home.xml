@@ -48,7 +48,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
-                android:fontFamily="@font/urbanist"
+                android:letterSpacing="0.1"
+                 android:fontFamily="@font/dragonfont"
                 android:text="WalkTopia"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
@@ -61,7 +62,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
-                android:fontFamily="@font/urbanist"
+                android:letterSpacing="0.1"
+                 android:fontFamily="@font/dragonfont"
                 android:text="loading..."
                 android:textAllCaps="false"
                 android:textColor="@color/white"
@@ -97,27 +99,46 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
 
-        <TextView
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:orientation="horizontal"
             android:layout_marginStart="20dp"
-            android:layout_marginTop="10dp"
-            android:fontFamily="@font/urbanist"
-            android:text="Hi Jha"
-            android:textAllCaps="false"
-            android:textColor="@color/white"
-            android:textFontWeight="400"
-            android:textSize="20dp"
-            android:textStyle="bold" />
+            >
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/hand1"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="8dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/urbanist"
+                android:text="Hello Jha"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textFontWeight="400"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+
+
+        </LinearLayout>
+
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
-            android:layout_marginBottom="32dp"
-            android:fontFamily="@font/urbanist"
+            android:layout_marginBottom="10dp"
+             android:fontFamily="@font/dragonfont"
             android:text="Welcome Back"
             android:textAllCaps="false"
+            android:letterSpacing="0.1"
+
             android:textColor="@color/white"
             android:textFontWeight="600"
             android:textSize="25dp"
@@ -176,17 +197,18 @@
                     android:layout_width="25dp"
                     android:layout_height="25dp"
                     android:layout_gravity="center_horizontal"
-                    android:src="@drawable/footstep" />
+                    android:src="@drawable/foot" />
 
                 <TextView
                     android:id="@+id/stepsTaken"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:fontFamily="@font/urbanist"
+                    android:layout_marginTop="10dp"
+                     android:fontFamily="@font/dragonfont"
                     android:text="0"
                     android:textAllCaps="false"
-                    android:textColor="@color/black"
+                    android:letterSpacing="0.1"
+                    android:textColor="@color/white"
                     android:textFontWeight="600"
                     android:textSize="40dp"
                     android:textStyle="bold" />
@@ -201,10 +223,10 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
-                        android:fontFamily="@font/urbanist"
+                         android:fontFamily="@font/dragonfont"
                         android:text="/"
                         android:textAllCaps="false"
-                        android:textColor="@color/black"
+                        android:textColor="@color/white"
                         android:textFontWeight="400"
                         android:textSize="18dp"
                         android:textStyle="bold" />
@@ -213,10 +235,11 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
-                        android:fontFamily="@font/urbanist"
+                         android:fontFamily="@font/dragonfont"
                         android:text="2500"
+                        android:letterSpacing="0.1"
                         android:textAllCaps="false"
-                        android:textColor="@color/black"
+                        android:textColor="@color/white"
                         android:textFontWeight="400"
                         android:textSize="12dp"
                         android:textStyle="bold" />
@@ -259,10 +282,12 @@
                         android:id="@+id/calories"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:fontFamily="@font/urbanist"
+                         android:fontFamily="@font/dragonfont"
                         android:text="78.9"
+                        android:letterSpacing="0.1"
+                        android:layout_marginTop="5dp"
                         android:textAllCaps="false"
-                        android:textColor="@color/black"
+                        android:textColor="@color/white"
                         android:textFontWeight="600"
                         android:textSize="32dp"
                         android:textStyle="bold" />
@@ -271,10 +296,11 @@
 
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:fontFamily="@font/urbanist"
+                         android:fontFamily="@font/dragonfont"
                         android:text="kcal"
                         android:textAllCaps="false"
-                        android:textColor="@color/black"
+                        android:textColor="@color/white"
+                        android:letterSpacing="0.1"
                         android:textFontWeight="400"
                         android:textSize="12dp"
                         android:textStyle="bold" />
@@ -282,10 +308,59 @@
                 </LinearLayout>
 
                 <View
-                    android:layout_width="0.5dp"
+                    android:layout_width="1dp"
                     android:layout_height="match_parent"
-                    android:alpha="0.2"
-                    android:background="@color/black" />
+                    android:alpha="0.5"
+                    android:background="#DADDE2" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginBottom="5dp"
+                        android:src="@drawable/time"
+                        tools:ignore="ContentDescription" />
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:letterSpacing="0.1"
+                        android:layout_height="wrap_content"
+                         android:fontFamily="@font/dragonfont"
+                        android:text="125"
+                        android:layout_marginTop="5dp"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textFontWeight="600"
+                        android:textSize="32dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                         android:fontFamily="@font/dragonfont"
+                        android:text="min"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textFontWeight="400"
+                        android:letterSpacing="0.1"
+                        android:textSize="12dp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:alpha="0.5"
+                    android:background="#DADDE2" />
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -305,11 +380,13 @@
 
                         android:id="@+id/distance"
                         android:layout_width="wrap_content"
+                        android:letterSpacing="0.1"
                         android:layout_height="wrap_content"
-                        android:fontFamily="@font/urbanist"
+                        android:fontFamily="@font/dragonfont"
                         android:text="564"
+                        android:layout_marginTop="5dp"
                         android:textAllCaps="false"
-                        android:textColor="@color/black"
+                        android:textColor="@color/white"
                         android:textFontWeight="600"
                         android:textSize="32dp"
                         android:textStyle="bold" />
@@ -318,17 +395,30 @@
 
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:fontFamily="@font/urbanist"
+                        android:fontFamily="@font/dragonfont"
                         android:text="meters"
                         android:textAllCaps="false"
-                        android:textColor="@color/black"
+                        android:textColor="@color/white"
                         android:textFontWeight="400"
+                        android:letterSpacing="0.1"
                         android:textSize="12dp"
                         android:textStyle="bold" />
 
                 </LinearLayout>
 
             </LinearLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/status"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:src="@drawable/graph"
+                />
+
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

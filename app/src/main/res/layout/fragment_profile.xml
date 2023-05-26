@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/bac"
     android:orientation="vertical"
     tools:context=".profileFragment">
 
@@ -23,7 +24,7 @@
             android:src="@drawable/back"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:tint="@color/black" />
+            app:tint="@color/white" />
 
 
         <TextView
@@ -33,12 +34,13 @@
             android:layout_gravity="center_vertical"
             android:layout_marginStart="5dp"
             android:layout_weight="1"
-            android:fontFamily="@font/urbanist"
+            android:fontFamily="@font/dragonfont"
             android:gravity="center"
+            android:letterSpacing="0.1"
             android:padding="0dp"
             android:text="Profile"
             android:textAllCaps="false"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:textFontWeight="600"
             android:textSize="20dp"
             android:textStyle="bold"
@@ -50,9 +52,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/setting"
+            android:visibility="invisible"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:tint="@color/black" />
+            app:tint="@color/white" />
 
     </LinearLayout>
 
@@ -93,10 +96,10 @@
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="2dp"
                 android:layout_marginBottom="2dp"
-                android:clickable="true"
-                android:padding="8dp"
                 android:background="@drawable/bluecircle"
+                android:clickable="true"
                 android:elevation="4dp"
+                android:padding="8dp"
                 android:src="@drawable/edit"
                 app:layout_constraintBottom_toBottomOf="@+id/profile_image"
                 app:layout_constraintEnd_toEndOf="@+id/profile_image"
@@ -107,12 +110,13 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:fontFamily="@font/urbanist"
+                android:fontFamily="@font/dragonfont"
                 android:gravity="center"
                 android:hint="Abhishek Jha"
+                android:letterSpacing="0.1"
                 android:text=""
-                android:textColor="@color/black"
-                android:textColorHint="@color/black"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
                 android:textFontWeight="600"
                 android:textSize="18dp"
                 android:textStyle="bold"
@@ -124,12 +128,13 @@
                 android:id="@+id/email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/urbanist"
+                android:fontFamily="@font/dragonfont"
                 android:gravity="center"
                 android:hint="jha85561@gmail.com"
+                android:letterSpacing="0.1"
                 android:text=""
-                android:textColor="@color/black"
-                android:textColorHint="@color/black"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
                 android:textFontWeight="400"
                 android:textSize="14dp"
                 android:textStyle="bold"
@@ -142,11 +147,14 @@
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
+                android:backgroundTint="@color/blue"
+                android:fontFamily="@font/dragonfont"
+                android:letterSpacing="0.1"
                 android:padding="10dp"
                 android:text="Edit Profile"
                 android:textAllCaps="false"
-                app:cornerRadius="50dp"
                 android:textSize="14dp"
+                app:cornerRadius="50dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/email" />
@@ -181,10 +189,11 @@
                         android:layout_gravity="center_vertical"
                         android:layout_marginStart="10dp"
                         android:layout_weight="1"
-                        android:fontFamily="@font/urbanist"
+                        android:fontFamily="@font/dragonfont"
                         android:gravity="left"
-                        android:text="Settings"
-                        android:textColor="@color/black"
+                        android:letterSpacing="0.1"
+                        android:text="Smart Tracking"
+                        android:textColor="@color/white"
                         android:textFontWeight="600"
                         android:textSize="14dp" />
 
@@ -221,10 +230,11 @@
                         android:layout_gravity="center_vertical"
                         android:layout_marginStart="10dp"
                         android:layout_weight="1"
-                        android:fontFamily="@font/urbanist"
+                        android:fontFamily="@font/dragonfont"
                         android:gravity="left"
+                        android:letterSpacing="0.1"
                         android:text="Leaderboard"
-                        android:textColor="@color/black"
+                        android:textColor="@color/white"
                         android:textFontWeight="600"
                         android:textSize="14dp" />
 
@@ -251,7 +261,7 @@
                         android:layout_gravity="center_vertical"
                         android:background="@drawable/bluecircle"
                         android:padding="8dp"
-                        android:src="@drawable/usermanagement"
+                        android:src="@drawable/start"
                         app:tint="@color/blue" />
 
                     <TextView
@@ -260,10 +270,11 @@
                         android:layout_gravity="center_vertical"
                         android:layout_marginStart="10dp"
                         android:layout_weight="1"
-                        android:fontFamily="@font/urbanist"
+                        android:fontFamily="@font/dragonfont"
                         android:gravity="left"
-                        android:text="User Management"
-                        android:textColor="@color/black"
+                        android:letterSpacing="0.1"
+                        android:text="Achievements &amp; Badges"
+                        android:textColor="@color/white"
                         android:textFontWeight="600"
                         android:textSize="14dp" />
 
@@ -279,10 +290,19 @@
 
                 </LinearLayout>
 
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_marginBottom="20dp"
+                    android:alpha="0.2"
+                    android:background="#DADDE2" />
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="32dp"
                     android:layout_marginBottom="10dp"
                     android:orientation="horizontal">
 
@@ -292,7 +312,7 @@
                         android:layout_gravity="center_vertical"
                         android:background="@drawable/bluecircle"
                         android:padding="8dp"
-                        android:src="@drawable/information"
+                        android:src="@drawable/setting"
                         app:tint="@color/blue" />
 
                     <TextView
@@ -301,10 +321,11 @@
                         android:layout_gravity="center_vertical"
                         android:layout_marginStart="10dp"
                         android:layout_weight="1"
-                        android:fontFamily="@font/urbanist"
+                        android:fontFamily="@font/dragonfont"
                         android:gravity="left"
-                        android:text="Information"
-                        android:textColor="@color/black"
+                        android:letterSpacing="0.1"
+                        android:text="Settings"
+                        android:textColor="@color/white"
                         android:textFontWeight="600"
                         android:textSize="14dp" />
 
@@ -341,8 +362,9 @@
                         android:layout_gravity="center_vertical"
                         android:layout_marginStart="10dp"
                         android:layout_weight="1"
-                        android:fontFamily="@font/urbanist"
+                        android:fontFamily="@font/dragonfont"
                         android:gravity="left"
+                        android:letterSpacing="0.1"
                         android:text="Logout"
                         android:textColor="@color/red"
                         android:textFontWeight="600"

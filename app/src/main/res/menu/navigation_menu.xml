@@ -19,9 +19,9 @@
 
         />
 
-    <item android:title="Setting"
-        android:icon="@drawable/setting"
-        android:id="@+id/setting"
+    <item android:title="Market"
+        android:icon="@drawable/cart"
+        android:id="@+id/market"
 
         />
 

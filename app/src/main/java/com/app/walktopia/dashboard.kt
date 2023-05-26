@@ -39,7 +39,7 @@ class dashboard : AppCompatActivity() {
                     return@OnNavigationItemSelectedListener true
                 }
 
-                R.id.setting -> {
+                R.id.market -> {
                     supportFragmentManager.beginTransaction()
                         .replace(R.id.container, SettingFragment).commit()
 
@@ -53,7 +53,7 @@ class dashboard : AppCompatActivity() {
     override fun onBackPressed() {
         val currentFragment =
             this.supportFragmentManager.findFragmentById(R.id.container)
-        if (currentFragment is themeFragment) {
+        if (currentFragment is themeFragment || currentFragment is profileFragment || currentFragment is settingFragment) {
             supportFragmentManager.beginTransaction()
                 .apply { replace(R.id.container, HomeFragment).commit() }
         } else {

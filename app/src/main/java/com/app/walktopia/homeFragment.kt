@@ -72,6 +72,8 @@ class homeFragment : Fragment(), SensorEventListener {
         calories = view.findViewById(R.id.calories)
         person = view.findViewById(R.id.person)
 
+
+
         person.setOnClickListener {
             ImagePicker.with(this@homeFragment)
                 .crop()

@@ -1,4 +1,4 @@
-# WalkTopia_HackVita2023
+o# WalkTopia_HackVita2023
 
 ## Table of Contents
 
@@ -36,17 +36,8 @@ The app is a fitness tracker that gamifies exercise by incorporating theme-based
 
 # Usage
 
-### Splash Screen
-<img src="Resources/app_screenshots/splash_screen.jpeg" alt="Splash Screen" width="250" height="550">
+<img src="Resources/application_preview/app_preview.png" alt="App Preview" >
 
-### Home Page
-<img src="Resources/app_screenshots/home_page.jpeg" alt="Home Page" width="250" height="550">
-
-### Theme Page
-<img src="Resources/app_screenshots/theme_page.jpeg" alt="Theme Page" width="250" height="550">
-
-### Profile Page
-<img src="Resources/app_screenshots/profile_page.jpeg" alt="Profile Page" width="250" height="550">
 
 
 # Contributing

@@ -34,6 +34,7 @@ import com.mikhaellopez.circularprogressbar.CircularProgressBar
 import java.io.ByteArrayOutputStream
 import java.io.IOException
 import java.util.*
+import kotlin.math.roundToInt
 
 class homeFragment : Fragment(), SensorEventListener {
 
@@ -47,6 +48,7 @@ class homeFragment : Fragment(), SensorEventListener {
     lateinit var address: TextView
     lateinit var person: ImageView
     lateinit var city: TextView
+    lateinit var time: TextView
     lateinit var calories: TextView
     lateinit var distance: TextView
     val ACTIVITY_RECOGNITION_REQUEST_CODE = 100
@@ -71,6 +73,7 @@ class homeFragment : Fragment(), SensorEventListener {
         distance = view.findViewById(R.id.distance)
         calories = view.findViewById(R.id.calories)
         person = view.findViewById(R.id.person)
+        time = view.findViewById(R.id.time)
 
 
 
@@ -93,6 +96,8 @@ class homeFragment : Fragment(), SensorEventListener {
         distance.text = value2
         val value3 = sharedPreferences.getString("calories", "0")
         calories.text = value3
+        val value4 = sharedPreferences.getString("time", "0")
+        time.text = value4
 
         val base64: String? = sharedPreferences.getString("image", null)
         if (base64 != null && base64.isNotEmpty()) {
@@ -135,11 +140,11 @@ class homeFragment : Fragment(), SensorEventListener {
         val stepSensor: Sensor? = sensorManager?.getDefaultSensor(Sensor.TYPE_STEP_COUNTER)
 
         if (stepSensor == null) {
-//            Toast.makeText(
-//                requireContext(),
-//                "No sensor detected on this device",
-//                Toast.LENGTH_SHORT
-//            ).show()
+            Toast.makeText(
+                requireContext(),
+                "No sensor detected on this device",
+                Toast.LENGTH_SHORT
+            ).show()
         } else {
             sensorManager?.registerListener(this, stepSensor, SensorManager.SENSOR_DELAY_UI)
         }
@@ -157,18 +162,21 @@ class homeFragment : Fragment(), SensorEventListener {
             total = event!!.values[0]
             val currentSteps = total.toInt() - previous.toInt()
             stepsTaken.text = ("$currentSteps")
-            distance.text = ((stepsTaken.text.toString().toFloat() * 78) as Float / 100f).toString()
+            distance.text = ((stepsTaken.text.toString().toFloat() * 78) as Float / 100f).roundToInt().toString()
             calories.text = ((stepsTaken.text.toString().toFloat() * 0.045).toInt()).toString()
+            time.text = ((stepsTaken.text.toString().toFloat() / 90).toInt()).toString()
 
             val value = stepsTaken.text.toString().trim { it <= ' ' }
             val value2 = distance.text.toString().trim { it <= ' ' }
             val value3 = calories.text.toString().trim { it <= ' ' }
+            val value4 = time.text.toString().trim { it <= ' ' }
             val sharedPref =
                 requireActivity().getSharedPreferences("myKey", Context.MODE_PRIVATE)
             val editor = sharedPref.edit()
             editor.putString("steps", value)
             editor.putString("distance", value2)
             editor.putString("calories", value3)
+            editor.putString("time", value4)
             editor.apply()
 
             progress.apply {
@@ -187,18 +195,21 @@ class homeFragment : Fragment(), SensorEventListener {
         stepsTaken.setOnLongClickListener {
             previous = total
             stepsTaken.text = 0.toString()
-            distance.text = ((stepsTaken.text.toString().toFloat() * 78) as Float / 100f).toString()
+            distance.text = ((stepsTaken.text.toString().toFloat() * 78) as Float / 100f).roundToInt().toString()
             calories.text = ((stepsTaken.text.toString().toFloat() * 0.045).toInt()).toString()
+            time.text = ((stepsTaken.text.toString().toFloat() / 90).toInt()).toString()
 
             val value = stepsTaken.text.toString().trim { it <= ' ' }
             val value2 = distance.text.toString().trim { it <= ' ' }
             val value3 = calories.text.toString().trim { it <= ' ' }
+            val value4 = time.text.toString().trim { it <= ' ' }
             val sharedPref =
                 requireActivity().getSharedPreferences("myKey", Context.MODE_PRIVATE)
             val editor = sharedPref.edit()
             editor.putString("steps", value)
             editor.putString("distance", value2)
             editor.putString("calories", value3)
+            editor.putString("time", value4)
             editor.apply()
             saveData()
 
@@ -290,7 +301,7 @@ class homeFragment : Fragment(), SensorEventListener {
                                 geocoder.getFromLocation(location.latitude, location.longitude, 1)
 
                             address.text =
-                                addresses!![0].subLocality + ", " + addresses[0].locality + ", " + addresses[0].adminArea
+                                addresses!![0].locality + ", " + addresses[0].adminArea
 
                             city.text = addresses[0].postalCode
 

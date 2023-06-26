@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
+    android:background="@color/black"
     tools:context=".MainActivity">
 
 
@@ -14,25 +15,9 @@
         android:layout_height="300dp"
         android:layout_margin="16dp"
         android:id="@+id/lottie"
-        app:lottie_rawRes="@raw/walking"
+        app:lottie_rawRes="@raw/lottiewalk"
         app:lottie_loop="true"
         app:lottie_autoPlay="true"/>
-
-    <TextView
-
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical"
-        android:fontFamily="@font/urbanist"
-        android:gravity="center"
-        android:text="WalkTopia"
-        android:textAllCaps="false"
-        android:textColor="@color/blue"
-        android:textFontWeight="600"
-        android:textSize="25dp"
-        android:textStyle="bold"
-        tools:ignore="MissingConstraints" />
-
 
 
 

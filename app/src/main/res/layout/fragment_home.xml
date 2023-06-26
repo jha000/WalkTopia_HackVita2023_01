@@ -50,7 +50,7 @@
                 android:layout_marginStart="10dp"
                 android:letterSpacing="0.1"
                  android:fontFamily="@font/dragonfont"
-                android:text="WalkTopia"
+                android:text="Nappam, Tezpur, Assam"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
                 android:textFontWeight="600"
@@ -64,7 +64,7 @@
                 android:layout_marginStart="10dp"
                 android:letterSpacing="0.1"
                  android:fontFamily="@font/dragonfont"
-                android:text="loading..."
+                android:text="784028"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
                 android:textFontWeight="400"
@@ -117,14 +117,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/urbanist"
-                android:text="Hello Jha"
+                android:text="Hello User"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
                 android:textFontWeight="400"
                 android:textSize="20dp"
                 android:textStyle="bold" />
-
-
 
         </LinearLayout>
 
@@ -205,7 +203,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                      android:fontFamily="@font/dragonfont"
-                    android:text="0"
+                    android:text="455"
                     android:textAllCaps="false"
                     android:letterSpacing="0.1"
                     android:textColor="@color/white"
@@ -256,6 +254,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="40dp"
                 android:layout_marginEnd="16dp"
+                android:gravity="center"
                 android:orientation="horizontal"
                 android:paddingBottom="16dp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -265,8 +264,8 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
                     android:gravity="center"
+                    android:layout_weight="1"
                     android:orientation="vertical">
 
                     <ImageView
@@ -316,8 +315,8 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
                     android:gravity="center"
+                    android:layout_weight="1"
                     android:orientation="vertical">
 
                     <ImageView
@@ -331,9 +330,10 @@
 
                         android:layout_width="wrap_content"
                         android:letterSpacing="0.1"
+                        android:id="@+id/time"
                         android:layout_height="wrap_content"
                          android:fontFamily="@font/dragonfont"
-                        android:text="125"
+                        android:text="12"
                         android:layout_marginTop="5dp"
                         android:textAllCaps="false"
                         android:textColor="@color/white"
@@ -365,8 +365,8 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
                     android:gravity="center"
+                    android:layout_weight="1"
                     android:orientation="vertical">
 
                     <ImageView
@@ -383,7 +383,7 @@
                         android:letterSpacing="0.1"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/dragonfont"
-                        android:text="564"
+                        android:text="312455"
                         android:layout_marginTop="5dp"
                         android:textAllCaps="false"
                         android:textColor="@color/white"
@@ -407,17 +407,6 @@
                 </LinearLayout>
 
             </LinearLayout>
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/status"
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="16dp"
-                android:src="@drawable/graph"
-                />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

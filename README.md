@@ -6,7 +6,6 @@ o# WalkTopia_HackVita2023
 - [Installation](#installation)
 - [Usage](#usage)
 - [Contributing](#contributing)
-- [License](#license)
 
 # About
 
@@ -49,7 +48,3 @@ Contributions are welcome! If you'd like to contribute to the project, please fo
 3. Make your changes and commit them
 4. Push your changes to your fork
 5. Submit a pull request
-
-# License
-
-This project is licensed under the [MIT License](/LICENSE).
